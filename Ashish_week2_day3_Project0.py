@@ -2,17 +2,16 @@
 
 import pymongo
 import json
-from pymongo import MongoClient
-
+import dateutil.parser
 
 #Connecting with MongoClient
-client = MongoClient('localhost',27017)  
+client=pymongo.MongoClient('localhost',27017)
 
 # Creating databases object
 db = client["meals"]  
 
 #Creating Collection
-db.create_collection("Meal_Information")
+#db.create_collection("Meal_Information")
 
 #  Insert Many
 db.Meal_Information.insert_many(json_data)  # Insert json data to database
@@ -32,9 +31,7 @@ doc = {"meal_id": int(input("enter meal_id "))}
 print(db.Meal_Information.find_one(doc))
 
 
-# # Limit
-
-
+# Limit
 for i in db.info.find().limit(10):
     print(i)
 
