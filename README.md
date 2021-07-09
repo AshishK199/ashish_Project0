@@ -1,25 +1,30 @@
-# ashish_Project0
+BY ASHISH KUMAR
 
-ind()
+Service Function
+search MEAL_ID INFORMATION BU MEAL_ID
+DIFFERENT ORDERS AS PER _ID'S 3.FILETRING THE DATA AS PER THE MEAL_ID.
 
-find_one()
+Sub-service
+USE MONGODB FOR NO SQL DATABASE AND USED PYMONGO FOR CONNECTING NOSQL WITH PYTHON
 
-limit()
+RESTAPI design:
+#IMPORTING THE PACKAGES BY USING PYMONGO AND CONNECTING IT WITH PYTHON #CONNECTING IT WITH CLIENT
 
-update_one()
+#Creating a Database */DATABASE CREATED8 */
 
-update_many()
+#INSERTING THE MANY RECORDS '''/ COLLECTION.INSERT()_MANY /'''''
 
-drop()
+##inserting_one_data */ COLLECTION.INSERT()_MANY */
 
-delete_one()
+#finding the meal_id /* FINDING THE MEAL_ID BY APROPRIATE ID */
 
-delete_many()
+#deleting one record /* DELETING ONE RECORD COLLECTION.DELETE_ONE()*/
 
-insert_one()
+#displaying limit of the database upto 3 /* DISPLAYING THE LIMITS UPTO DEFINED VALUE cOLLECTION.FIND().LIMIT(6)*/
 
-insert_many()
+##sorting in ascending order
+/* SORTING THE DATA COLLECTION.FIND().SORT() */
 
-inserted_ids()
+#update_one /UDATING THE QUERY IN THE DATABASES/ #UPDATE MANY /* UPDATE MANY UPADTE THE VALUES IN THA DATABASE */
 
-sort()
+#DELETE MANY/ /* DELETE THE RECORDS FROM THE DATABSE
