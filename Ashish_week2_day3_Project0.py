@@ -2,48 +2,34 @@
 
 import pymongo
 import json
-pymongo import MongoClient
-
+from pymongo import MongoClient
 
 
 #Connecting with MongoClient
-
 client = MongoClient('localhost',27017)  
 
-
 # Creating databases object
-
 db = client["meals"]  
 
-
 #Creating Collection
-
 db.create_collection("Meal_Information")
 
-
-
 #  Insert Many
+db.Meal_Information.insert_many(json_data)  # Insert json data to database
 
 
-db.info.insert_many(json_data)  # Insert json data to database
-
-
-# # Find
-
-
+# Find
 doc = {"cuisine": input("enter cuisine ")}
 
 # Find all documents from collection
-for i in db.info.find(doc):
+for i in db.Meal_Information.find(doc):
     print(i)
 
 
-# # Find One
-
-
+# Find One
 doc = {"meal_id": int(input("enter meal_id "))}
 
-print(db.info.find_one(doc))
+print(db.Meal_Information.find_one(doc))
 
 
 # # Limit
@@ -53,66 +39,50 @@ for i in db.info.find().limit(10):
     print(i)
 
 
-# # Update One
-
-
-
+# Update One
 doc = {"meal_id": int(input("enter meal_id "))}
 update = {"$set": {"category": input("enter category to be changed ")}}
 
-db.info.update_one(doc, update)
+db.Meal_Information.update_one(doc, update)
 
-print(db.info.find_one(doc))
-
-
-# # Update Many
+print(db.Meal_Information.find_one(doc))
 
 
-
+# Update Many
 doc = {"cuisine": input("enter cuisine ")}
 update = {"$set": {"category": input("enter category to be changed ")}}
 
-db.info.update_many(doc, update)
+db.Meal_Information.update_many(doc, update)
 
-for i in db.info.find(doc):
+for i in db.Meal_Information.find(doc):
     print(i)
 
 
-# # Drop
-
-
-
-db.info.drop()
-for i in db.info.find({}):
+# Drop
+db.Meal_Information.drop()
+for i in db.Meal_Information.find({}):
     print(i)
 
 
-# # Delete One
-
-
-
+# Delete One
 doc = {"meal_id": int(input("enter meal_id "))}
 
-db.info.delete_one(doc)
+db.Meal_Information.delete_one(doc)
 
-for i in db.info.find({}):
+for i in db.Meal_Information.find({}):
     print(i)
 
 
-# # Delete Many
-
-
+# Delete Many
 doc = {"category": input("enter category ")}
 
-db.info.delete_many(doc)
+db.Meal_Information.delete_many(doc)
 
-for i in db.info.find({}):
+for i in db.Meal_Information.find({}):
     print(i)
 
 
-# # Insert One
-
-
+# Insert One
 meal_id = int(input("enter meal id "))
 doc = {
     "meal_id": meal_id,
@@ -120,13 +90,11 @@ doc = {
     "cuisine": input("enter cuisine")
 }
 
-db.info.insert_one(doc)
-print(db.info.find_one({"meal_id": meal_id}))
+db.Meal_Information.insert_one(doc)
+print(db.Meal_Information.find_one({"meal_id": meal_id}))
 
 
-# # Insert Many
-
-
+# Insert Many
 docs = []
 for i in range(int(input("number of meals "))):
     doc = {
@@ -136,26 +104,21 @@ for i in range(int(input("number of meals "))):
     }
     docs.append(doc)
 
-ids = db.info.insert_many(docs)
-for i in db.info.find({}):
+ids = db.Meal_Information.insert_many(docs)
+for i in db.Meal_Information.find({}):
     print(i)
 
 
-# # Inserted Id
-
-
+# Inserted Id
 print(ids.inserted_ids)
 
 
 
 
-for i in db.info.find({}, {"_id": 1}):
+for i in db.Meal_Information.find({}, {"_id": 1}):
     print(i["_id"])
 
 
-# # Sort
-
-
-
-for i in db.info.find().sort("meal_id", 1):
+# Sort
+for i in db.Meal_Information.find().sort("meal_id", 1):
     print(i)
