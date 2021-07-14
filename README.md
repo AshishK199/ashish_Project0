@@ -4,12 +4,15 @@ Meal delivery system filter the data by using the in built operation.
 
 DATABASE
 
-Mongodb Compass
+1.Mongodb Compass
+2.MYSQL
 
 REQUIREMENT AND TECH STACK
-1.Python,
+1.Python
 2.data in json file
 3.MongoDB is implemented python libraries need for connecting are pymongo,json,pprint,json,warnings.
+4.Jupyter
+
 MEAL_DELIVERY_COMAPNY
 
 BY Ashish Kumar
@@ -34,17 +37,18 @@ INSERTING THE MANY RECORDS
 
 collection.insert_many()
 inserting_one_data
-/ COLLECTION.INSERT()_ONE /
 
+/ COLLECTION.INSERT()_ONE /
 result=collection.insert_one(insrt)
 Finding the meal_id
-/ FINDING THE MEAL_ID BY APROPRIATE ID /
 
+/ FINDING THE MEAL_ID BY APROPRIATE ID /
 collection.find_one({'meal_id':1010})
+
 Deleting one record
 / DELETING ONE RECORD /
-
 COLLECTION.DELETE_ONE()
+
 Displaying limit of the database upto 3
 / DISPLAYING THE LIMITS UPTO DEFINED VALUE/
 
