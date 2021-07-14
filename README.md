@@ -3,21 +3,27 @@ PROBLEM DESCRIPTION
 Meal delivery system filter the data by using the in built operation.
 
 DATABASE
+
 Mongodb Compass
+
 REQUIREMENT AND TECH STACK
 1.Python,
 2.data in json file
 3.MongoDB is implemented python libraries need for connecting are pymongo,json,pprint,json,warnings.
 MEAL_DELIVERY_COMAPNY
+
 BY Ashish Kumar
+
 Service Function
 1. SEARCH MEAL_ID INFORMATION BU MEAL_ID
 2. DIFFERENT ORDERS AS PER _ID'S
 3.FILETRING THE DATA AS PER THE MEAL_ID.
+
 PYMONGO QUERIES
 USE MONGODB FOR NO SQL DATABASE AND USED PYMONGO FOR CONNECTING NOSQL WITH PYTHON
 RESTAPI design:
 IMPORTING THE PACKAGES BY USING PYMONGO AND CONNECTING IT WITH PYTHON
+
 CONNECTING IT WITH CLIENT
 Creating a Database
 /DATABASE CREATED /
